@@ -3,25 +3,33 @@ import express from 'express'
 import publicRoutes from './routes/public.js'
 import adminRoutes from './routes/admin.js'
 
+function normalizeOrigin(value) {
+  return (value || '').trim().replace(/\/$/, '')
+}
+
 function getAllowedOrigins() {
   return [
-    process.env.FRONTEND_URL?.trim(),
+    normalizeOrigin(process.env.FRONTEND_URL),
     ...(process.env.CORS_ALLOWED_ORIGINS || '')
       .split(',')
-      .map((value) => value.trim())
+      .map((value) => normalizeOrigin(value))
       .filter(Boolean),
   ]
 }
 
+function isAllowedVercelOrigin(origin) {
+  return /^https:\/\/([a-z0-9-]+\.)*vercel\.app$/i.test(origin)
+}
+
 function applyCors(request, response) {
-  const origin = request.get('origin')
+  const origin = normalizeOrigin(request.get('origin'))
   const allowedOrigins = getAllowedOrigins()
 
   if (!origin) {
     return
   }
 
-  if (allowedOrigins.length === 0 || allowedOrigins.includes(origin)) {
+  if (allowedOrigins.length === 0 || allowedOrigins.includes(origin) || isAllowedVercelOrigin(origin)) {
     response.setHeader('Access-Control-Allow-Origin', origin)
     response.setHeader('Vary', 'Origin')
     response.setHeader('Access-Control-Allow-Credentials', 'true')
