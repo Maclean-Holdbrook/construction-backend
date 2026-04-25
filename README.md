@@ -32,3 +32,13 @@ Set these environment variables in Vercel:
 - `RESEND_API_KEY`
 - `RESEND_FROM_EMAIL`
 - `CONTACT_TO_EMAIL`
+
+Deploy this repo to Vercel as a backend project with:
+
+- Framework Preset: `Other`
+- Root Directory: empty
+- Build Command: none
+- Output Directory: none
+- Install Command: `npm install`
+
+The backend is served by the catch-all Vercel function at `api/[...path].js`.
