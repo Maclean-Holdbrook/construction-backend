@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "id": "diamond-cement-50kg",
+      "name": "Diamond Cement 50kg",
+      "category": "Cement",
+      "price": 88,
+      "unit": "per bag",
+      "badge": "Best Seller",
+      "stock": "In Stock",
+      "description": "High-strength cement suitable for block work, casting, and reinforced concrete jobs.",
+      "imageUrl": "/products/cement.jpg"
+    },
+    {
+      "id": "concrete-block-6-inch",
+      "name": "6-Inch Concrete Block",
+      "category": "Blocks",
+      "price": 14,
+      "unit": "per block",
+      "badge": "Site Essential",
+      "stock": "In Stock",
+      "description": "Standard concrete blocks for walling, fencing, and residential site development.",
+      "imageUrl": "/products/blocks.jpg"
+    },
+    {
+      "id": "river-sand-load",
+      "name": "River Sand Load",
+      "category": "Sand",
+      "price": 1950,
+      "unit": "per trip",
+      "badge": "Bulk Order",
+      "stock": "In Stock",
+      "description": "Clean construction sand suitable for plastering, mortar mixing, and screeding.",
+      "imageUrl": "/products/sand.jpg"
+    },
+    {
+      "id": "iron-rod-12mm",
+      "name": "12mm Iron Rod",
+      "category": "Iron Rods",
+      "price": 148,
+      "unit": "per length",
+      "badge": "High Demand",
+      "stock": "In Stock",
+      "description": "Reliable reinforcement rod for slabs, beams, columns, and commercial structural work.",
+      "imageUrl": "/products/iron-rods.jpg"
+    },
+    {
+      "id": "crushed-stones-aggregate",
+      "name": "Crushed Stones Aggregate",
+      "category": "Stones",
+      "price": 1650,
+      "unit": "per cubic yard",
+      "badge": "Foundation Mix",
+      "stock": "In Stock",
+      "description": "Crushed aggregate for foundations, concrete mixing, drainage layers, and hardscaping.",
+      "imageUrl": "/products/stones.jpg"
+    }
+  ],
+  "orders": []
+}
